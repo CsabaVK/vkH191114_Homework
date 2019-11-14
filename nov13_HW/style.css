@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Rubik:300');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: #f5f5f5;
+    font-family: 'Rubik', sans-serif;
+    color: black;
+    line-height: 1.5;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: minmax(10px, auto);
+    grid-gap: 20px;
+    grid-template-areas: 
+    "title title title title"
+    "left left left left" 
+    "banner banner banner banner"
+    "banner2 banner2 banner3 banner3"
+    "banner4 banner4 banner4 banner4"
+    "footer footer footer footer" ;
+}
+
+img {
+    width: 100%;
+    box-shadow: 0px 30px 25px -20px #101c30;
+}
+
+.one {
+    grid-area: left;
+    color: white;
+    padding: 20px;    
+    background: slategray;
+    padding: 10px;
+}
+
+.one p {
+    padding: 30px 10px;
+}
+
+.two {
+    grid-area: title;
+    text-align: center;
+}
+
+h1 {
+    padding: 10px 10px 0 10px;
+}
+
+.three {
+    grid-area: banner;
+    height: 60%;  
+}
+
+.four {
+    grid-area: banner2;
+}
+
+.five {
+    grid-area: banner3;
+}
+
+.six {
+    grid-area: banner4;
+}
+
+.seven {
+    margin: 0 20px 20px 20px;
+    grid-area: footer;
+}
+
+@media screen and (min-width: 760px) {
+    .content {
+        display: grid;
+        width: 100%;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: minmax(70px, auto);
+        grid-gap: 30px;
+        grid-template-areas: 
+        "left title title title"
+        "left banner banner banner"
+        "left banner2 banner3 banner4"
+        "left footer footer footer" ;
+    }
+}
